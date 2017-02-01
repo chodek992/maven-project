@@ -25,7 +25,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <jms:outbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS"/>
     </flow>
     <flow name="logFlights">
-        <jms:inbound-endpoint connector-ref="Active_MQTEST" doc:name="JMS" queue="flights"/>
+        <jms:inbound-endpoint connector-ref="Active_MQTEST2" doc:name="JMS" queue="flights"/>
         <logger level="INFO" doc:name="Logger" message="#[message.payload]"/>
     </flow>
     <flow name="mavenFlow">
